@@ -12,7 +12,8 @@ public class PlayerHealth : MonoBehaviour {
 	public Text hp;
 
 	public Text maxHP;
-
+	public GameObject player;
+    
 	// Update is called once per frame
 	void Update () {
 		hp.text = currentHealth.ToString();
@@ -21,8 +22,9 @@ public class PlayerHealth : MonoBehaviour {
 	public void TakeDamage(int amount){
 		currentHealth -= amount;
 		if(currentHealth <= 0){
-			currentHealth=0;
+			currentHealth = 0;
 			print("You are Dead! Game Over!");
 		}
 	}
-}
+ }
+
